@@ -4,9 +4,35 @@
 using namespace std;
 
 
-void media(){
+void calmedia(){
+    int totalalunos=0;
+    //apos os alunos serem armazenados substitui no for pelo arquivo salvo na manipulacao de arquivos
+    string nomedosalunos;
+    float nota=1.7;
     
+    int diciplinaquantidade, diciplinanome;
+    float a,b,c,d,media;
+   media=(a+b+c+d)/4;
+   //pegar primeiro o aluno
+  for (int i=0; i < totalalunos; i++){
+    float soma;
+    cout << "media do alunos: " << nomedosalunos << endl;
+    //apos pegar o aluno preciso procurar a diciplina que ele esta matriculado
+      for (int j =0; j < diciplinaquantidade; j++){
+        cout << "diciplina:" << diciplinanome <<" | "<< nota <<" | "<< media <<endl;
+        soma=+nota;
+      
+      }
+      cout <<"media geral de todas as diciplinas: " <<   soma/diciplinaquantidade;
+
+  }
+
   
+  
+}
+
+void consultanota(){
+
 }
 int main()
 
@@ -46,6 +72,7 @@ int main()
           break;
         
         case 4 :
+        calmedia();
          break;
 
          case 5:
