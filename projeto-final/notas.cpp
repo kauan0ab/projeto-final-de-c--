@@ -17,7 +17,7 @@ void mostrarMenu()
   cout << "7: Encerrar programa" << endl;
 }
 
-bool apenasLetras(const string &str)
+bool apenasLetras(const string & str)
 {
   for (char c : str)
   {
@@ -27,7 +27,7 @@ bool apenasLetras(const string &str)
   return true;
 }
 
-bool apenasNumeros(const string &str)
+bool apenasNumeros(const string & str)
 {
   for (char c : str)
   {
@@ -42,7 +42,7 @@ string cadastrarAluno()
   ofstream arquivo("alunos.txt", ios::app);
   if (!arquivo.is_open())
   {
-    cerr << "Erro ao abrir o arquivo\n";
+    cerr << "Erro ao abrir o arquivo" << endl;
     return "";
   }
 
@@ -56,31 +56,31 @@ string cadastrarAluno()
 
   if (!getline(ss, nome, '-') || !getline(ss, matricula, '-') || !getline(ss, turma, '-'))
   {
-    cout << "Formato inválido. Use nome-matricula-turma\n";
+    cout << "Formato inválido. Use nome-matricula-turma" << endl;
     return "";
   }
 
   if (!apenasLetras(nome))
   {
-    cout << "Nome inválido. Deve conter apenas letras.\n";
+    cout << "Nome inválido. Deve conter apenas letras." << endl;
     return "";
   }
 
   if (!apenasNumeros(matricula))
   {
-    cout << "Matrícula inválida. Deve conter apenas números.\n";
+    cout << "Matrícula inválida. Deve conter apenas números." <<endl;
     return "";
   }
 
   if (!apenasNumeros(turma))
   {
-    cout << "Turma inválida. Deve conter apenas números (codigo da turma).\n";
+    cout << "Turma inválida. Deve conter apenas números (codigo da turma)." << endl;
     return "";
   }
 
   arquivo << entrada << endl;
   arquivo.close();
-  cout << "Aluno cadastrado com sucesso.\n";
+  cout << "Aluno cadastrado com sucesso." << endl;
 
   return entrada;
 }
@@ -127,11 +127,11 @@ int main()
       break;
 
     case 7:
-      cout << "Encerrando programa.\n";
+      cout << "Encerrando programa." <<endl;
       break;
 
     default:
-      cout << "Opção inválida.\n";
+      cout << "Opção inválida." <<endl;
       break;
     }
 
